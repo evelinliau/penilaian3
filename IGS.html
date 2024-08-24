@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGS Page</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            box-sizing: border-box;
+            padding: 100px;
+            text-align: center;
+        }
+
+        .left {
+            flex: 1;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right {
+            flex: 1;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1
+        {
+            width: 450px;
+            font-size: 3cm;
+            text-align: center;
+            color: brown;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.04cm;
+            font-weight: light;
+        }
+        h2
+        {
+            font-size: 2.3cm;
+            font-weight: lighter;
+            width: 2cm;
+            height: 3cm;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <h1>{{ kata }}</h1>
+    </div>
+
+    <div class="right">
+        {% for datas in data %}
+            {% if datas == 1 %}
+                <h2 style="background-color: yellow;">{{ datas }}</h2>
+            {% elif datas == 2 %}
+                <h2 style="background-color: greenyellow">{{ datas }}</h2>
+            {% elif datas == 3 %}
+                <h2 style="background-color: cyan">{{ datas }}</h2>
+            {% else %}
+                <h2 style="background-color: red">{{ datas }}</h2>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>
+
